@@ -1,0 +1,28 @@
+<a href="{{ anime.get_absolute_url }}" class="row g-2 bg-dark">
+    <div class="col-md-4">
+
+        {% if anime.photo %}
+        <img height="250" src="{{ anime.photo.url }}" alt="" class="card-img-top">
+        {% else %}
+        <img height="250px" src="https://imageproxy.ifunny.co/noop/user_photos/cb68ad6075e5a6428131ca8ca1916ea5c11f464a_0.jpg"
+             class="card-img-top" alt="...">
+        {% endif %}
+
+    </div>
+    <div class="col-md-8 mt-4">
+        <div class="card-body" style="height: 200px">
+            <h5 class="card-title">{{ anime.title }}</h5>
+            <p class="card-text">{{ anime.context|truncatechars:200 }}</p>
+        </div>
+
+        <div class="d-flex justify-content-between p-2">
+            <span>{{ anime.views }}</span>
+            <span>{{ anime.created_at }}</span>
+        </div>
+
+    </div>
+</a>
+
+
+
+

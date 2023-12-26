@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+
+{% block main %}
+
+
+<div class="d-flex justify-content-between mt-5">
+
+    <div class="col-2">
+        {% include 'anime/components/_categories.html' %}
+    </div>
+
+
+    <div class="col-9">
+
+        <div class="card mb-3" style="max-width: 540px;">
+            {% for anime in animas %}
+            {% include 'anime/components/_anime_card.html' %}
+            {% endfor %}
+        </div>
+
+    </div>
+
+
+</div>
+
+
+{% endblock main %}
+
+
+
+
+
